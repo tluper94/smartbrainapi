@@ -21,6 +21,7 @@ app.post('/register', register.handleRegister(db, bcrypt));
 app.get('/profile/:id', profile.getUserProfile(db));
 //Handles user image submits
 app.put('/image', image.handleImage(db));
+app.post('/imageurl', image.handleApiCall);
 // Sets server to port 3000
 app.listen(3000, () => {
 	console.log('App is running on port 3000');
